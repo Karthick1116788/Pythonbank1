@@ -1,0 +1,21 @@
+class BankAccount:
+    def __init__(self, accountNumber ,name ,balance):
+        self.accountNumber=accountNumber
+        self.name=name
+        self.balance=balance
+    def Deposit(self,add):
+        self.balance=self.balance+add
+        return self.balance
+    def Withdrawal(self, sub):
+        self.balance=self.balance-sub
+        return self.balance
+    def bankFees(self, fee=5):
+        fees=fee/100*self.balance
+        self.balance=self.balance - fees
+    def display(self):
+        print(self.name,self.accountNumber,self.balance)
+a=BankAccount(123,"jayashree"1000)
+a.Deposit(2000)
+a.Withdrawal(500)
+a.bankFees()
+a.display()
